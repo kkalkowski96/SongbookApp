@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24808025189",
+    "project_id": "songbook-44d7c",
+    "storage_bucket": "songbook-44d7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24808025189:android:cb73b3efbc8c79c754aa8c",
+        "android_client_info": {
+          "package_name": "com.example.songbookapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24808025189-fa50ogfhd1k7mpe2eplro8t13huh40ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNOyA0MEn3yzWo9sgdyTo8I_F32K6T3og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24808025189-fa50ogfhd1k7mpe2eplro8t13huh40ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
