@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SongBookApp</string>
+    <string name="login_input_hint">E-mail</string>
+    <string name="password_input_hint">Hasło</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="join_us">Załóż konto</string>
+    <string name="settings_menu_layout">Settings Logout</string>
 </resources>
