@@ -5,4 +5,7 @@
     <string name="log_in">Zaloguj</string>
     <string name="join_us">Załóż konto</string>
     <string name="settings_menu_layout">Wyloguj</string>
+    <string name="song_title">Title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

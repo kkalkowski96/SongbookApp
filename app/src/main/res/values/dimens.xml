@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- login/register fragment -->
     <dimen name="margin_between_elements">8dp</dimen>
     <dimen name="login_button_width">200dp</dimen>
+    <!-- song_item -->
+    <dimen name="song_item_text_size">32sp</dimen>
+    <dimen name="song_item_text_view_padding">15dp</dimen>
 </resources>

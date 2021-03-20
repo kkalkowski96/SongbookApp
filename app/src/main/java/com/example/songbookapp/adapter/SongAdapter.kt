@@ -3,11 +3,13 @@ package com.example.songbookapp.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.songbookapp.R
 import com.example.songbookapp.data.Song
 
-class SongAdapter: RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
+class SongAdapter(private val songListener: OnSongItemClickListener):
+    RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
 
     private val songsList = ArrayList<Song>()
 
@@ -20,7 +22,7 @@ class SongAdapter: RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
     inner class SongViewHolder(view: View): RecyclerView.ViewHolder(view) {
         init {
             view.setOnClickListener{
-
+                songListener.onSongItemClick(songsList[adapterPosition], adapterPosition)
             }
         }
     }
@@ -32,10 +34,20 @@ class SongAdapter: RecyclerView.Adapter<SongAdapter.SongViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
+        bindData(holder)
+    }
 
+    private fun bindData(holder: SongViewHolder) {
+        val songTitle = holder.itemView.findViewById<TextView>(R.id.item_song_title)
+
+        songTitle.text = songsList[holder.adapterPosition].title
     }
 
     override fun getItemCount(): Int {
         return songsList.size
     }
+}
+
+interface OnSongItemClickListener{
+    fun onSongItemClick(song: Song, position: Int)
 }
