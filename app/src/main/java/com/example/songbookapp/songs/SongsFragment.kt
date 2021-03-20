@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.songbookapp.R
 import com.example.songbookapp.adapter.OnSongItemClickListener
@@ -53,6 +54,8 @@ class SongsFragment : Fragment(), OnSongItemClickListener {
     }
 
     override fun onSongItemClick(song: Song, position: Int) {
-       Toast.makeText(requireContext(), song.bpm.toString(), Toast.LENGTH_LONG).show()
+       // Toast.makeText(requireContext(), song.bpm.toString(), Toast.LENGTH_LONG).show()
+        val action = SongsFragmentDirections.actionSongsFragmentToSongContentFragment(song)
+        findNavController().navigate(action)
     }
 }

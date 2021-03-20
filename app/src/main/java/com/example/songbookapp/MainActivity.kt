@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -26,9 +25,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        firebaseAuth.signOut()
-        startActivity(Intent(this, AuthActivity::class.java))
-        finish()
-        return true
+        return when(item.itemId){
+            R.id.main_menu_logout -> {
+                firebaseAuth.signOut()
+                startActivity(Intent(this, AuthActivity::class.java))
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

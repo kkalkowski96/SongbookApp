@@ -8,4 +8,12 @@
         <item name="android:textSize">@dimen/song_item_text_size</item>
         <item name="android:padding">@dimen/song_item_text_view_padding</item>
     </style>
+    <style name="Widget.SongBookApp.SongContent.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">@dimen/song_item_text_size</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/song_item_text_view_padding</item>
+        <item name="android:textStyle">italic</item>
+    </style>
 </resources>

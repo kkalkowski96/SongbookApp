@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".songs.SongContentFragment">
+
+    <data>
+        <variable
+            name="songContentFragment"
+            type="com.example.songbookapp.songs.SongContentFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/fragment_song_content_bpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@{@string/song_content_bpm(songContentFragment.song.bpm)}"
+                style="@style/Widget.SongBookApp.SongContent.TextView"
+                tools:text="Beats Per Minute: 158"/>
+            <TextView
+                android:id="@+id/fragment_song_content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/song_content_title(songContentFragment.song.title)}"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                app:layout_constraintStart_toStartOf="@+id/fragment_song_content_bpm"
+                app:layout_constraintTop_toBottomOf="@id/fragment_song_content_bpm"
+                style="@style/Widget.SongBookApp.SongContent.TextView" />
+            <TextView
+                android:id="@+id/fragment_song_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{songContentFragment.song.contentText}"
+                app:layout_constraintStart_toStartOf="@+id/fragment_song_content_bpm"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_song_content_title"
+                style="@style/Widget.SongBookApp.SongContent.TextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

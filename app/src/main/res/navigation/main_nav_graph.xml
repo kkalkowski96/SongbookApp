@@ -9,5 +9,18 @@
         android:id="@+id/songsFragment"
         android:name="com.example.songbookapp.songs.SongsFragment"
         android:label="fragment_songs"
-        tools:layout="@layout/fragment_songs" />
+        tools:layout="@layout/fragment_songs" >
+        <action
+            android:id="@+id/action_songsFragment_to_songContentFragment"
+            app:destination="@id/songContentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songContentFragment"
+        android:name="com.example.songbookapp.songs.SongContentFragment"
+        android:label="fragment_song_content"
+        tools:layout="@layout/fragment_song_content" >
+        <argument
+            android:name="song"
+            app:argType="com.example.songbookapp.data.Song" />
+    </fragment>
 </navigation>
